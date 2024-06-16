@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .mouse-coordinates {
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            position: absolute;
+            top: 50px;
+            left: 10px;
+        }
+
+        .aqui {
+            border: 1px solid black;
+
+        }
+    </style>
+
+</head>
+<body>
+    
+    <button onclick="console.log('Você clicou no botão!')">Clique aqui</button>
+    <input type="text" onkeydown="alert('Tecla pressionada!')">
+
+    <div class="mouse-coordinates">Conteúdo</div>
+
+    <div class="aqui" onmousemove="alert('Mouse movido')">Conteúdo</div>
+
+    <script src="e.js"></script>
+</body>
+</html>
