@@ -65,6 +65,7 @@ app.get("/pokemons/:id", (req: Request, res: Response)=>{
     for(let i = 0; i < pokemons.length; i++) {
         if(pokemons[i]!.id === id) {
             pokemon = pokemons[i];
+            break;
         }
     }
     res.status(200).json(pokemon);
