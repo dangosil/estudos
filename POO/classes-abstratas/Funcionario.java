@@ -15,12 +15,18 @@ public abstract class Funcionario {
         return cpf;
     }
 
+    public boolean validarCpf() {
+        String soNumeros = cpf.replaceAll("[^0-9]", "");
+        return soNumeros.length() == 11;
+    }
+
     public abstract double calcularSalario();
 
     public void exibirDados() {
         double salario = calcularSalario();
         System.out.println("Nome: " + this.nome);
         System.out.println("CPF: " + this.cpf);
+        System.out.println("CPF valido? " + (validarCpf() ? "Sim" : "Não"));
         System.out.printf("Salario: R$ %.2f\n", salario);
     }
 }
