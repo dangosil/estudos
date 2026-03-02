@@ -1,6 +1,6 @@
 void main() {
     System.out.println("Esse é o Screen Match");
-    System.out.println("Filme: Top Gun: Maverick");
+    System.out.println("modelos.Filme: Top Gun: Maverick");
 
     int anoDeLancamento = 2022;
     System.out.println("Ano de lançamento:" + anoDeLancamento);
@@ -13,7 +13,7 @@ void main() {
 
     String sinopse;
     sinopse = """
-            Filme de aventura com galã dos anos 80
+            modelos.Filme de aventura com galã dos anos 80
             Muito bom!
             """;
     System.out.println(sinopse);
