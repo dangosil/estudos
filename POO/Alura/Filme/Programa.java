@@ -1,4 +1,5 @@
 import modelos.Filme;
+import modelos.Serie;
 
 public class Programa {
     static void main(String[] args) {
@@ -18,5 +19,13 @@ public class Programa {
 
         System.out.println("Número de avaliações: " + filme1.getTotalAvaliacoes());
         System.out.println("Média das avaliações: " + filme1.pegaMedia());
+
+        System.out.println("--------------------------------------------");
+        Serie OnePiece = new Serie();
+        OnePiece.setTitulo("One Piece");
+        OnePiece.setAnoLancamento(1997);
+        OnePiece.exibeFicha();
+        OnePiece.setTemporadas(18);
+
     }
 }
