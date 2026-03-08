@@ -1,3 +1,4 @@
+import calculos.CalculadoraTempo;
 import modelos.Filme;
 import modelos.Serie;
 
@@ -19,6 +20,10 @@ public class Programa {
 
         System.out.println("Número de avaliações: " + filme1.getTotalAvaliacoes());
         System.out.println("Média das avaliações: " + filme1.pegaMedia());
+        CalculadoraTempo calcu =  new CalculadoraTempo();
+
+        calcu.inclui(filme1);
+        System.out.println(calcu.getTempoTotal());
 
         System.out.println("--------------------------------------------");
         Serie OnePiece = new Serie();
@@ -29,6 +34,8 @@ public class Programa {
         OnePiece.setEpisodiosPorTemporada(50);
         OnePiece.exibeFicha();
         System.out.println("Duração para maratonar One Piece: " + OnePiece.getDuracaoMinutos());
+        calcu.inclui(OnePiece);
+        System.out.println(calcu.getTempoTotal());
 
     }
 }
