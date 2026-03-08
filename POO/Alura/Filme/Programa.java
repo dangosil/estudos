@@ -24,8 +24,11 @@ public class Programa {
         Serie OnePiece = new Serie();
         OnePiece.setTitulo("One Piece");
         OnePiece.setAnoLancamento(1997);
-        OnePiece.exibeFicha();
         OnePiece.setTemporadas(18);
+        OnePiece.setMinutosPorEpisodio(20);
+        OnePiece.setEpisodiosPorTemporada(50);
+        OnePiece.exibeFicha();
+        System.out.println("Duração para maratonar One Piece: " + OnePiece.getDuracaoMinutos());
 
     }
 }
