@@ -61,7 +61,7 @@ public class Titulo {
         totalAvaliacoes++;
     }
 
-    public String pegaMedia() {
-        return String.format("%.2f", (double) somaAvaliacoes / totalAvaliacoes);
+    public double pegaMedia() {
+        return ((double) somaAvaliacoes / totalAvaliacoes);
     }
 }

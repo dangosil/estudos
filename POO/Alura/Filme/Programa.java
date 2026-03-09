@@ -1,4 +1,6 @@
 import calculos.CalculadoraTempo;
+import calculos.FiltroRecomendacao;
+import modelos.Episodio;
 import modelos.Filme;
 import modelos.Serie;
 
@@ -37,5 +39,14 @@ public class Programa {
         calcu.inclui(OnePiece);
         System.out.println(calcu.getTempoTotal());
 
+
+        FiltroRecomendacao filtro =  new FiltroRecomendacao();
+        filtro.filtra(filme1);
+
+        Episodio ep1 =  new Episodio();
+        ep1.setNumero(1);
+        ep1.setSerie(OnePiece);
+        ep1.setTotalVisualizacoes(1000);
+        filtro.filtra(ep1);
     }
 }
