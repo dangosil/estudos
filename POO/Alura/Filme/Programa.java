@@ -4,6 +4,8 @@ import modelos.Episodio;
 import modelos.Filme;
 import modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Programa {
     static void main(String[] args) {
         Filme filme1 = new Filme();
@@ -48,5 +50,26 @@ public class Programa {
         ep1.setSerie(OnePiece);
         ep1.setTotalVisualizacoes(1000);
         filtro.filtra(ep1);
+
+        var filmeDaniel = new Filme();
+        filmeDaniel.setDuracaoMinutos(200);
+        filmeDaniel.setTitulo("É assim que acaba");
+        filmeDaniel.setAnoLancamento(2024);
+        filmeDaniel.avaliar(10);
+
+        ArrayList<Filme> listaFilmes = new ArrayList<>();
+
+        listaFilmes.add(filmeDaniel);
+        listaFilmes.add(filme1);
+        System.out.println("Tamanho da lista de filmes: " + listaFilmes.size());
+        System.out.println("Primeiro filme " + listaFilmes.get(0).getTitulo());
+        System.out.println(listaFilmes);
+
+        System.out.println("Primeiro filme: " + listaFilmes.get(0).toString());
+        System.out.println("Segunddo filme: " + listaFilmes.get(1).toString());
+
+        for (Filme filme : listaFilmes) {
+            System.out.println(filme);
+        }
     }
 }
