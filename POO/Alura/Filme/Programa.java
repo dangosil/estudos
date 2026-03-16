@@ -8,8 +8,7 @@ import java.util.ArrayList;
 
 public class Programa {
     static void main(String[] args) {
-        Filme filme1 = new Filme("Os Vingadores");
-        filme1.setAnoLancamento(2012);
+        Filme filme1 = new Filme("Os Vingadores", 2012);
         filme1.setDuracaoMinutos(142);
         filme1.setIncluidoPlano(true);
         filme1.avaliar(8);
@@ -29,9 +28,7 @@ public class Programa {
         System.out.println(calcu.getTempoTotal());
 
         System.out.println("--------------------------------------------");
-        Serie OnePiece = new Serie();
-        OnePiece.setTitulo("One Piece");
-        OnePiece.setAnoLancamento(1997);
+        Serie OnePiece = new Serie("One Piece", 1997);
         OnePiece.setTemporadas(18);
         OnePiece.setMinutosPorEpisodio(20);
         OnePiece.setEpisodiosPorTemporada(50);
@@ -50,7 +47,7 @@ public class Programa {
         ep1.setTotalVisualizacoes(1000);
         filtro.filtra(ep1);
 
-        var filmeDaniel = new Filme("É assim que acaba");
+        var filmeDaniel = new Filme("É assim que acaba", 2024);
         filmeDaniel.setDuracaoMinutos(200);
         filmeDaniel.setAnoLancamento(2024);
         filmeDaniel.avaliar(10);
