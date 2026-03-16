@@ -1,3 +1,5 @@
+package principal;
+
 import calculos.CalculadoraTempo;
 import calculos.FiltroRecomendacao;
 import modelos.Episodio;
@@ -63,8 +65,11 @@ public class Programa {
         System.out.println("Primeiro filme: " + listaFilmes.get(0).toString());
         System.out.println("Segunddo filme: " + listaFilmes.get(1).toString());
 
-        for (Filme filme : listaFilmes) {
-            System.out.println(filme);
-        }
+//        for (Filme filme : listaFilmes) {
+//            System.out.println(filme);
+//        }
+
+        System.out.println();
+        listaFilmes.forEach(System.out::println);
     }
 }
