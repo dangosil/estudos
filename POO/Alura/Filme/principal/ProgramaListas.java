@@ -29,5 +29,13 @@ public class ProgramaListas {
 
         }
 
+        Titulo maiorDuracao = lista.get(0);
+
+        for (Titulo titulo : lista) {
+            if (titulo instanceof Filme filme && filme.getDuracaoMinutos()) > maiorDuracao.getDuracaoMinutos()) {
+                System.out.println("");
+            }
+        }
+
     }
 }
