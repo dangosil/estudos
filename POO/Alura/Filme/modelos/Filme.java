@@ -5,8 +5,8 @@ import calculos.Classificavel;
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
-    public Filme(String titulo, int anoLancamento) {
-        super(titulo, anoLancamento);
+    public Filme(String titulo, int anoLancamento, int duracaoMinutos) {
+        super(titulo, anoLancamento, duracaoMinutos);
     }
 
     public String getDiretor() {
