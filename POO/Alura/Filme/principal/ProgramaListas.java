@@ -6,6 +6,7 @@ import modelos.Titulo;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 public class ProgramaListas {
     static void main(String[] args) {
@@ -17,9 +18,9 @@ public class ProgramaListas {
         OnePiece.setEpisodiosPorTemporada(30);
 
         ArrayList<Titulo> lista = new ArrayList<>();
-        lista.add(OnePiece);
         lista.add(filme1);
         lista.add(filmeDaniel);
+        lista.add(OnePiece);
 
         System.out.println();
 //        lista.forEach(System.out::println);
@@ -47,6 +48,10 @@ public class ProgramaListas {
         }
 
         System.out.println("O título com maior duração é " + maiorDuracao.getTitulo() + " com " + maiorDuracao.getDuracaoMinutos() + " minutos.");
+
+        lista.sort(Comparator.comparing(Titulo::getAnoLancamento));
+        System.out.println("Ordenada por ano");
+        System.out.println(lista);
 
     }
 }
